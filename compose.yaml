@@ -1,5 +1,5 @@
 services:
-  info:
+  phpinfo:
     image: tangramor/nginx-php8-fpm:php8.4.3_withoutNodejs
     restart: always
     env_file:
@@ -9,9 +9,9 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
-      - "traefik.http.routers.info.rule=Host(\"${DOMAIN}\")"
-      - "traefik.http.routers.info.entrypoints=websecure"
-      - "traefik.http.routers.info.tls.certresolver=myresolver"
+      - "traefik.http.routers.phpinfo.rule=Host(\"${DOMAIN}\")"
+      - "traefik.http.routers.phpinfo.entrypoints=websecure"
+      - "traefik.http.routers.phpinfo.tls.certresolver=myresolver"
     networks:
       web:
       global:
