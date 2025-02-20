@@ -1,5 +1,6 @@
 services:
   phpinfo:
+    container_name: phpinfo
     image: tangramor/nginx-php8-fpm:php8.4.3_withoutNodejs
     restart: always
     env_file:
@@ -14,11 +15,7 @@ services:
       - "traefik.http.routers.phpinfo.tls.certresolver=myresolver"
     networks:
       web:
-      global:
 networks:
   web:
     name: web
-    external: true
-  global:
-    name: global
     external: true
