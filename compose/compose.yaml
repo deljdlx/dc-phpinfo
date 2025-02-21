@@ -15,7 +15,6 @@ services:
       - "traefik.http.routers.phpinfo.tls.certresolver=myresolver"
     networks:
       web:
-      mariadb:
 networks:
   web:
     name: web
