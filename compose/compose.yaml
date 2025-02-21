@@ -1,12 +1,12 @@
 services:
   phpinfo:
     container_name: phpinfo
-    image: tangramor/nginx-php8-fpm:php8.4.3_withoutNodejs
+    build: .
     restart: always
     env_file:
       - .env
     volumes:
-      - "./src:/var/www/html"
+      - "../src:/var/www/html"
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
@@ -15,6 +15,7 @@ services:
       - "traefik.http.routers.phpinfo.tls.certresolver=myresolver"
     networks:
       web:
+      mariadb:
 networks:
   web:
     name: web
