@@ -9,6 +9,7 @@ on:
 jobs:
   deploy-sandbox:
     uses: deljdlx/github-tools/.github/workflows/deploy.yml@main
+    environment: Production  # ⬅️ Ajout de l’environnement "Production"
     with:
       repo_name: "dc-phpinfo"
       repo_owner: "deljdlx"
