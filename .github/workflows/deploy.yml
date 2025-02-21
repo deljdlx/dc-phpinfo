@@ -13,5 +13,5 @@ jobs:
       repo_name: "dc-phpinfo"
       repo_owner: "deljdlx"
       deploy_folder: "/home/jdlxt/stack"
-    # secrets:
-    #   ssh_key: ${{ secrets.DEPLOY_KEY }}
+    secrets:
+      ssh_key: ${{ secrets.DEPLOY_KEY }}
