@@ -2,12 +2,12 @@ services:
   phpinfo:
     # image: deljdlx/php-nginx
     container_name: phpinfo
-    build: .
+    build: ./compose
     restart: always
     env_file:
       - .env
     volumes:
-      - "../src:/var/www/html"
+      - "./src:/var/www/html"
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
