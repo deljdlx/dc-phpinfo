@@ -1,5 +1,6 @@
 services:
   phpinfo:
+    image: deljdlx/php-nginx
     container_name: phpinfo
     build: .
     restart: always
