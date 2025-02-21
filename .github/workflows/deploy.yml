@@ -10,7 +10,8 @@ jobs:
   deploy-sandbox:
     uses: deljdlx/github-tools/.github/workflows/deploy.yml@main
     with:
-      repo_name: "dc-phpinfo"
+      host_name: "phpinfo.jlb.ninja"
+      repo_name: "dc-docker-api"
       repo_owner: "deljdlx"
       deploy_folder: "/home/jdlxt/stack"
     secrets:
